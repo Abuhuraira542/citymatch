@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= -, initial-scale=1.0">
+    <title>Country Check</title>
+</head>
+<body>
+    <label>
+        Check your city:
+       n <input type="text" id="city">
+    </label>
+    <br>
+    <br>
+    <button onclick="submit()">Check</button>
+
+    <script>
+        function submit()
+        {
+            let usercity = document.getElementById("city").value;
+            let newarr = ["Karachi","Lahore","Peshwar","Multan","Islamabad","Quetta"]
+            let match ="no"
+            for(i=0; i<=newarr.length; i++){
+                if(usercity == newarr[i]){
+                    match="yes"
+                    break;
+                }
+            }
+        if(match=="no"){
+            alert("City did not match")
+        }else{
+            alert("City match congragulation")
+        }
+        }
+        
+    </script>
+</body>
+</html>
